@@ -1,0 +1,11 @@
+@forward "../config/variables";
+
+%extends-achortags {
+    text-decoration: none;
+}
+
+%extens-inputandbtns {
+    outline: none;
+    border: none;
+    text-align: center;
+}
