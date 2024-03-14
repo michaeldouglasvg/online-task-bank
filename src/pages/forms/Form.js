@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { FaChevronCircleDown, FaPlus } from 'react-icons/fa'
+import { FaChevronCircleDown, FaClock, FaPlus, FaSave } from 'react-icons/fa'
 
 const Form = () => {
     const [reminder, setReminder] = useState(false);
@@ -12,9 +12,9 @@ const Form = () => {
                 <FaPlus size={15} color='blue' />
                 <p>Write</p>
             </button>
-           {form && <div className="reminder" onClick={() => setReminder(!reminder)}
-                style={{background: reminder?"green":"orange"}}>
-                <p>Add Reminder</p>
+           {form && <div className="reminder">
+                <FaSave size={15} color='black' className='Icons'/>
+                <FaClock size={15} color='orangered' className='Icons' onClick={() => setReminder(!reminder)}/>
             </div>}
         </div>
       {form && 
@@ -40,9 +40,6 @@ const Form = () => {
                         </div>
                     </>
                 }
-                <div className="fonminputs" style={{marginTop: reminder?"1rem":"0rem"}}>
-                    <input type="submit" value="Save Task" />
-                </div>
             </form>
         </div>
         }

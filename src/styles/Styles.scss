@@ -41,25 +41,17 @@ body{
     margin: 0 auto;
     // background: whitesmoke;
     backdrop-filter: blur(5px);
-    box-shadow: 0 0 5px 2px rgba(28, 28, 28, 0.2);
     .headesection{
         width: 100%;
         padding: .4rem 1rem;
-        box-shadow: 0 0 5px 2px rgba(28, 28, 28, 0.2);
+        box-shadow: 0 0 2px 1px rgba(28, 28, 28, 0.2);
+        border-radius: 0 0 10px 10px;
+        border-top: .4rem solid brown;
         .Headermainstyles{
             width: 100%;
             .Icon{
                 cursor: pointer;
                 margin-right: 1rem;
-            }
-            .maintop{
-                width: 100%;
-                border-bottom: 1px solid rgb(196, 196, 196);
-                padding: .6rem 0;
-                h1{
-                    text-align: center;
-                    padding: 0 .6rem;
-                }
             }
             .headerfooter{
                 display: flex;
@@ -101,10 +93,15 @@ body{
     }
     .MainForm{
         width: 100%;
-        border-bottom: 1px solid rgb(196, 196, 196);
         position: relative;
         transition: all 500ms;
         padding: 1rem;
+        box-shadow: 0 0 2px 1px rgba(28, 28, 28, 0.2);
+        border-radius: 0 0 10px 10px;
+        border-top: .4rem solid skyblue;
+        z-index: 10;
+        position: relative;
+        top: -.3rem;
         .heading{
             display: flex;
             align-items: center;
@@ -126,16 +123,13 @@ body{
                 }
             }
             .reminder{
-                outline: none;
-                border: none;
                 display: flex;
                 align-items: center;
-                justify-content: space-between;
-                padding: .4rem 1rem;
-                border-radius: 3px;
-                background: rgb(253, 195, 108);
-                color: white;
-                cursor: pointer;
+                flex-direction: row;
+                .Icons{
+                    margin-left: 1rem;
+                    cursor: pointer;
+                }
             }
         }
         .formfields{
@@ -184,7 +178,6 @@ body{
             z-index: 10;
             transition: all 500ms;
             cursor: pointer;
-            margin-left: 1rem;
         }
     }
 }
