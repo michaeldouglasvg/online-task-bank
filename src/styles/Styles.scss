@@ -101,15 +101,14 @@ body{
     }
     .MainForm{
         width: 100%;
-        padding: 1rem;
         border-bottom: 1px solid rgb(196, 196, 196);
         position: relative;
         transition: all 500ms;
+        padding: 1rem;
         .heading{
             display: flex;
             align-items: center;
             justify-content: space-between;
-            padding: 0 .5rem;
             button{
                 outline: none;
                 border: none;
@@ -141,7 +140,6 @@ body{
         }
         .formfields{
             margin: 1rem auto;
-            padding: 1rem;
             form{
                 width: 100%;
                 display: grid;
