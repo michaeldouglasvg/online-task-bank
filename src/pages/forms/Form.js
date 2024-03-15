@@ -1,40 +1,47 @@
-import React, { useState } from 'react'
-import { FaChevronCircleDown, FaClock, FaPlus, FaSave } from 'react-icons/fa'
+import React, { useState, useEffect } from 'react'
+import { FaBell, FaChevronCircleDown, FaPlus, FaSave } from 'react-icons/fa'
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const Form = () => {
     const [reminder, setReminder] = useState(false);
     const [form, setForm] = useState(false);
 
+    useEffect(() => {
+        AOS.init();
+        AOS.refresh();
+    }, []);
+
   return (
-    <div className='MainForm'>
-       <div className="heading">
+    <div className='MainForm' data-aos="zoom-in" data-aos-offset="0">
+       <div className="heading" data-aos="zoom-in" data-aos-offset="0">
             <button onClick={() => setForm(!form)}>
                 <FaPlus size={15} color='blue' />
                 <p>Write</p>
             </button>
-           {form && <div className="reminder">
+           {form && <div className="reminder" data-aos="zoom-in" data-aos-offset="0">
                 <FaSave size={15} color='black' className='Icons'/>
-                <FaClock size={15} color='orangered' className='Icons' onClick={() => setReminder(!reminder)}/>
+                <FaBell size={15} color='orangered' className='Icons' onClick={() => setReminder(!reminder)}/>
             </div>}
         </div>
       {form && 
         <div className="formfields">
             <form action="">
-                <div className="fonminputs">
+                <div className="fonminputs" data-aos="zoom-in" data-aos-offset="0">
                     <span>Title</span>
                     <input type="text" name="task" id="" placeholder='Enter the title here'/>
                 </div>
-                <div className="fonminputs">
+                <div className="fonminputs" data-aos="zoom-in" data-aos-offset="0">
                     <span>Message</span>
                     <input type="text" name="task" id="" placeholder='Enter the Message'/>
                 </div>
                 {reminder && 
                     <>
-                        <div className="fonminputs">
+                        <div className="fonminputs" data-aos="zoom-in" data-aos-offset="0">
                             <span>Select Date</span>
                             <input type="date" name="task" id=""/>
                         </div>
-                        <div className="fonminputs">
+                        <div className="fonminputs" data-aos="zoom-in" data-aos-offset="0">
                             <span>Pick Time</span>
                             <input type="time" name="task" id=""/>
                         </div>

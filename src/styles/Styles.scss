@@ -33,6 +33,9 @@ body{
     position: relative;
     overflow-x: hidden;
     background: rgb(225, 225, 225);
+    &::-webkit-scrollbar{
+        display: none;
+    }
 }
 
 .MainPage{
@@ -179,6 +182,94 @@ body{
             transition: all 500ms;
             cursor: pointer;
         }
+    }
+    .SingleTask{
+        width: 99%;
+        padding: .7rem 1rem;
+        margin: 1rem auto;
+        border-radius: 3px;
+        .header{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            padding: .4rem 0 .8rem 0;
+            border-bottom: 1px solid rgb(218, 218, 218);
+            cursor: pointer;
+            &:hover{
+                .right{
+                    .actions{
+                        transition:  all 500ms;
+                        display: inline-block;
+                        z-index: 1000;
+                        backdrop-filter: blur(10px);
+                    }
+                }
+            }
+            .left{
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-between;
+                .checkbox{
+                    width: 20;
+                    height: 20;
+                    display: grid;
+                    place-items: center;
+                    margin-top: .2rem;
+                }
+                .heading{
+                    margin-left: 1rem;
+                }
+            }
+            .right{
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-between;
+                .actions{
+                    margin-right: 1rem;
+                    display: none;
+                    height: 15px;
+                    .actions-icon{
+                        margin-right: .8rem;
+                        cursor: pointer;
+                    }
+                }
+                .time{
+                    p{
+                        font-size: 15px;
+                        font-weight: 600;
+                    }
+                }
+            }
+        }
+        .content{
+            width: 100%;
+            padding: .4rem 0;
+            p{
+                line-height: 1.5rem;
+            }
+        }
+    }
+    .tasksection{
+        overflow-y: scroll;
+        width: 100%;
+        max-height: calc(100vh - 150px);
+        &::-webkit-scrollbar{
+            display: none;
+        }
+    }
+    .footer{
+        position: absolute;
+        bottom: 0;
+        padding: 1rem .2rem;
+        backdrop-filter: blur(2px);
+        border-radius: 5px 5px 0 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
     }
 }
 
