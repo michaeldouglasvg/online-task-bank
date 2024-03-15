@@ -19,7 +19,7 @@ const SingleTask = () => {
             {content?<input type="checkbox" name="checkbox" id="" />:<FaChevronCircleDown size={15} color='gray' className='actions-icon'/>}
           </div>
           <div className="heading">
-            <h3>This is a task for doing today</h3>
+            <h3>Swimming...</h3>
           </div>
         </div>
         <div className="right">
