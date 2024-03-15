@@ -261,7 +261,7 @@ body{
         }
     }
     .footer{
-        position: absolute;
+        position: fixed;
         bottom: 0;
         padding: 1rem .2rem;
         backdrop-filter: blur(2px);
@@ -270,6 +270,7 @@ body{
         align-items: center;
         justify-content: space-between;
         width: 100%;
+        z-index: 1000;
     }
 }
 
