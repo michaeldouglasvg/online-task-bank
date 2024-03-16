@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { FaChevronCircleDown, FaClock, FaStar, FaTrash } from 'react-icons/fa';
+import { FaChevronDown, FaRegClock, FaRegEdit, FaRegStar, FaRegTrashAlt } from 'react-icons/fa';
 import AOS from "aos";
 import "aos/dist/aos.css";
 
@@ -16,20 +16,21 @@ const SingleTask = () => {
       <div className="header" onClick={() => setContent(!content)}>
         <div className="left">
           <div className="checkbox">
-            {content?<input type="checkbox" name="checkbox" id="" />:<FaChevronCircleDown size={15} color='gray' className='actions-icon'/>}
+            {content?<input type="checkbox" name="checkbox" id="" />:<FaChevronDown size={15} color='gray' className='actions-icon'/>}
           </div>
+          <FaRegClock size={15} color='gray' className='actions-icon' style={{margin: "0 .4rem 0 .4rem"}}/>
           <div className="heading">
             <h3>Swimming...</h3>
           </div>
         </div>
         <div className="right">
           <div className="actions">
-            <FaStar size={15} color='gray' className='actions-icon'/>
-            <FaTrash size={15} color='gray' className='actions-icon'/>
-            <FaClock size={15} color='gray' className='actions-icon'/>
+            <FaRegStar size={15} color='gray' className='actions-icon'/>
+            <FaRegTrashAlt size={15} color='gray' className='actions-icon'/>
+            <FaRegEdit size={15} color='gray' className='actions-icon'/>
           </div>
           <div className="time">
-            <p>2, Jun 23</p>
+            <p>Mar 2</p>
           </div>
        </div>
       </div>

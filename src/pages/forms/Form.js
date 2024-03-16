@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { FaBell, FaChevronCircleDown, FaPlus, FaSave } from 'react-icons/fa'
+import { FaChevronCircleDown, FaPlus, FaRegBell, FaRegSave } from 'react-icons/fa'
 import AOS from "aos";
 import "aos/dist/aos.css";
 
@@ -20,8 +20,8 @@ const Form = () => {
                 <p>Write</p>
             </button>
            {form && <div className="reminder" data-aos="zoom-in" data-aos-offset="0">
-                <FaSave size={15} color='black' className='Icons'/>
-                <FaBell size={15} color='orangered' className='Icons' onClick={() => setReminder(!reminder)}/>
+                <FaRegSave size={15} color='black' className='Icons'/>
+                <FaRegBell size={15} color='orangered' className='Icons' onClick={() => setReminder(!reminder)}/>
             </div>}
         </div>
       {form && 
@@ -42,7 +42,7 @@ const Form = () => {
                             <input type="date" name="task" id=""/>
                         </div>
                         <div className="fonminputs" data-aos="zoom-in" data-aos-offset="0">
-                            <span>Pick Time</span>
+                            <span>Select Time</span>
                             <input type="time" name="task" id=""/>
                         </div>
                     </>

@@ -1,5 +1,5 @@
 import React from 'react'
-import { FaCog, FaEdit, FaMoon, FaSignOutAlt, FaStar } from "react-icons/fa";
+import { FaRegEdit, FaRegMoon, FaRegStar, FaSignOutAlt, FaUserCog } from "react-icons/fa";
 
 const Header = () => {
   return (
@@ -10,15 +10,15 @@ const Header = () => {
           <div className="text">
             <p>Gtech@23</p>
             <div className="content">
-              <FaEdit size={18} color='gray' className='Icon'/>
+              <FaRegEdit size={18} color='gray' className='Icon'/>
               <FaSignOutAlt size={18} color='gray' className='Icon'/>
             </div>
           </div>
         </div>
         <div className="settings">
-          <FaStar size={18} color='brown' className='Icon'/>
-          <FaCog size={18} color='grey' className='Icon'/>
-          <FaMoon size={18} color='grey' className='Icon'/>
+          <FaRegStar size={18} color='brown' className='Icon'/>
+          <FaUserCog size={18} color='grey' className='Icon'/>
+          <FaRegMoon size={18} color='grey' className='Icon'/>
         </div>
       </div>
     </div>

@@ -50,6 +50,7 @@ body{
         box-shadow: 0 0 2px 1px rgba(28, 28, 28, 0.2);
         border-radius: 0 0 10px 10px;
         border-top: .4rem solid brown;
+        background: rgb(225, 225, 225);
         .Headermainstyles{
             width: 100%;
             .Icon{
@@ -99,12 +100,11 @@ body{
         position: relative;
         transition: all 500ms;
         padding: 1rem;
-        box-shadow: 0 0 2px 1px rgba(28, 28, 28, 0.2);
+        border: 1px solid rgba(28, 28, 28, 0.2);
         border-radius: 0 0 10px 10px;
-        border-top: .4rem solid skyblue;
-        z-index: 10;
         position: relative;
         top: -.3rem;
+        border-top: none;
         .heading{
             display: flex;
             align-items: center;
@@ -216,10 +216,9 @@ body{
                     height: 20;
                     display: grid;
                     place-items: center;
-                    margin-top: .2rem;
                 }
                 .heading{
-                    margin-left: 1rem;
+                    margin-left: 0rem;
                 }
             }
             .right{
@@ -278,5 +277,14 @@ body{
     .MainPage{
         max-width: 100%;
         width: 100%;
+    }
+    .SingleTask{
+        .header{
+            .right{
+                .actions{
+                    display: inline-block;
+                }
+            }
+        }
     }
 }
