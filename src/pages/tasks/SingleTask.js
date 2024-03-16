@@ -2,9 +2,11 @@ import React, { useState, useEffect } from 'react'
 import { FaChevronDown, FaRegClock, FaRegEdit, FaRegStar, FaRegTrashAlt } from 'react-icons/fa';
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { useUserContext } from '../../context/UserContext';
 
 const SingleTask = () => {
   const [content, setContent] = useState(false);
+  const {selectOption } = useUserContext();
 
   useEffect(() => {
     AOS.init();
@@ -16,8 +18,9 @@ const SingleTask = () => {
       <div className="header" onClick={() => setContent(!content)}>
         <div className="left">
           <div className="checkbox">
-            {content?<input type="checkbox" name="checkbox" id="" />:<FaChevronDown size={15} color='gray' className='actions-icon'/>}
+            <FaChevronDown size={15} color='gray' className='actions-icon' style={{transform: !content?"rotate(0deg)": "rotate(-180deg)"}}/>
           </div>
+          {selectOption && <input type="checkbox" name="checkbox" id="" style={{margin: "0 .4rem 0 .4rem"}}/>}
           <FaRegClock size={15} color='gray' className='actions-icon' style={{margin: "0 .4rem 0 .4rem"}}/>
           <div className="heading">
             <h3>Swimming...</h3>

@@ -50,13 +50,10 @@ body{
         box-shadow: 0 0 2px 1px rgba(28, 28, 28, 0.2);
         border-radius: 0 0 10px 10px;
         border-top: .4rem solid brown;
-        background: rgb(225, 225, 225);
+        background: #e1e1e1;
         .Headermainstyles{
             width: 100%;
-            .Icon{
-                cursor: pointer;
-                margin-right: 1rem;
-            }
+            position: relative;
             .headerfooter{
                 display: flex;
                 flex-direction: row;
@@ -90,6 +87,58 @@ body{
                                 font-weight: 600;
                             }
                         }
+                    }
+                }
+                .settings{
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    .headerIcons{
+                        width: 20px;
+                        height: 20px;
+                        border-radius: 100%;
+                        display: grid;
+                        place-items: center;
+                        margin-right: 1rem;
+                        cursor: pointer;
+                    }
+                }
+            }
+            .usercontrols{
+                position: absolute;
+                bottom: -16rem;
+                right: 0rem;
+                background: #e1e1e1;
+                box-shadow: 0 0 2px 1px rgba(28, 28, 28, 0.2);
+                width: 165px;
+                padding: .6rem;
+                z-index: 1100;
+                h3{
+                    padding: .6rem 0;
+                    border-bottom: 1px solid rgb(193, 193, 193);
+                }
+                .singleSetting{
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    width: 100%;
+                    margin: .2rem auto;
+                    padding: .6rem;
+                    &:hover{
+                        background: rgb(187, 187, 187);
+                        border-radius: 3px;
+                        .Icon{
+                            color: rgb(24, 24, 23);
+                        }
+                        p{
+                            color: rgb(24, 24, 23);
+                        }
+                    }
+                    p{
+                        font-size: 15px;
+                        margin-left: .4rem;
+                        font-weight: 550;
+                        color: gray;
                     }
                 }
             }
