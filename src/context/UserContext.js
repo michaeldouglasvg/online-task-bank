@@ -5,17 +5,26 @@ const UserContext = createContext();
 const UserProvider = ({ children }) => {
   const [selectOption, setSelectOptions] = useState(false);
   const [setting, setSettings] = useState(false);
+  const [notifications, setNotifications] = useState(false);
 
   const selectTodo = () => {
     if(setting) setSettings(false);
-    setSelectOptions(!selectOption)
+    setSelectOptions(!selectOption);
   }
-  
-  const openSettings = () => setSettings(!setting);
+
+  const openSettings = () => {
+    if(notifications) setNotifications(false);
+    setSettings(!setting);
+  }
+
+  const setNotificationAlerts = () => {
+    if(setting) setSettings(false);
+    setNotifications(!notifications);
+  }
 
   const values = { selectOption, 
-    selectTodo, openSettings, 
-    setSettings, setting, setSelectOptions
+    selectTodo, openSettings, notifications,
+    setSettings, setting, setSelectOptions, setNotificationAlerts
   }
 
   return (

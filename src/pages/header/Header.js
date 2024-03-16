@@ -1,9 +1,9 @@
 import React from 'react'
-import { FaRegEdit, FaRegMoon, FaRegStar, FaRegTrashAlt, FaSignOutAlt, FaUserCog } from "react-icons/fa";
+import { FaChartBar, FaChartLine, FaDownload, FaRegEdit, FaRegMoon, FaRegStar, FaRegTrashAlt, FaSignOutAlt, FaTasks, FaUserCog, FaUserPlus, FaUsers } from "react-icons/fa";
 import { useUserContext } from '../../context/UserContext';
 
 const Header = () => {
-  const {setting, openSettings, selectTodo, selectOption } = useUserContext();
+  const {setting, openSettings, selectTodo, selectOption, setNotificationAlerts, notifications } = useUserContext();
 
   return (
     <div className='Headermainstyles'>
@@ -13,6 +13,7 @@ const Header = () => {
           <div className="text">
             <p>Gtech@23</p>
             <div className="content">
+              <FaUserPlus size={18} color='gray' className='Icon'/>
               <FaSignOutAlt size={18} color='gray' className='Icon'/>
             </div>
           </div>
@@ -22,29 +23,51 @@ const Header = () => {
             <FaRegStar size={18} color='brown' className='Icon'/>
           </div>
           <div className="headerIcons">
+            <FaChartLine size={18} color='grey' className='Icon' onClick={setNotificationAlerts}/>
+          </div>
+          <div className="headerIcons">
             <FaUserCog size={18} color='grey' className='Icon' onClick={openSettings}/>
-            {setting&&<div className="usercontrols">
-              <h3>User Settings</h3>
-              <div className="singleSetting">
-                <FaRegEdit size={18} color='gray' className='Icon'/>
-                <p>Edit Profile</p>
-              </div>
-              <div className="singleSetting" onClick={selectTodo}>
-                <FaRegTrashAlt size={18} color='gray' className='Icon'/>
-                <p>{selectOption?"Disable":"Delete"} Multple</p>
-              </div>
-              <div className="singleSetting">
-                <FaRegMoon size={18} color='gray' className='Icon'/>
-                <p>Dark Theme</p>
-              </div>
-              <div className="singleSetting">
-                <FaSignOutAlt size={18} color='gray' className='Icon'/>
-                <p>Logout</p>
-              </div>
-            </div>}
           </div>
         </div>
       </div>
+      {notifications&&<div className="usercontrols">
+        <h3>Analytics</h3>
+        <div className="singleSetting">
+          <FaTasks size={18} color='gray' className='Icon'/>
+          <p>History</p>
+        </div>
+        <div className="singleSetting">
+          <FaChartBar size={18} color='gray' className='Icon'/>
+          <p>Analysis</p>
+        </div>
+        <div className="singleSetting">
+          <FaDownload size={18} color='gray' className='Icon'/>
+          <p>Reports</p>
+        </div>
+        <div className="singleSetting">
+          <FaUsers size={18} color='gray' className='Icon'/>
+          <p>Accounts</p>
+        </div>
+      </div>}
+      {setting&&<div className="usercontrols">
+        <h3>User Settings</h3>
+        <div className="singleSetting">
+          <FaRegEdit size={18} color='gray' className='Icon'/>
+          <p>Edit Profile</p>
+        </div>
+        <div className="singleSetting" onClick={selectTodo}>
+          <FaRegTrashAlt size={18} color='gray' className='Icon'/>
+          <p>{selectOption?"Disable":"Delete"} Multple</p>
+        </div>
+        <div className="singleSetting">
+          <FaRegMoon size={18} color='gray' className='Icon'/>
+          <p>Dark Theme</p>
+        </div>
+        <div className="singleSetting">
+          <FaSignOutAlt size={18} color='gray' className='Icon'/>
+          <p>Logout</p>
+        </div>
+      </div>}
     </div>
   )
 }
