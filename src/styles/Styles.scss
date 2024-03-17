@@ -335,6 +335,7 @@ body{
         height: 100vh;
         padding: .6rem;
         border-top: .6rem solid brown;
+        border-radius: 5px 5px 0 0;
         .heading{
             width: 100%;
             h1{
@@ -423,7 +424,7 @@ body{
                 outline: 1px solid #c9c9c9;
             }
             .forns{
-                width: 100%;
+                width: 80%;
                 margin: 3rem auto;
                 .provider{
                     display: grid;

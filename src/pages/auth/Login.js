@@ -31,11 +31,11 @@ const Login = () => {
         <div className="forns">
             <div className="provider">
                 <button>
-                    <FaGoogle size={15} color='gray' data-aos="zoom-in" data-aos-offset="0"/>
+                    <FaGoogle size={15} color='orangered' data-aos="zoom-in" data-aos-offset="0"/>
                     <p>Continue with Google</p>
                 </button>
                 <button>
-                    <FaFacebook size={15} color='gray' data-aos="zoom-in" data-aos-offset="0"/>
+                    <FaFacebook size={15} color='skyblue' data-aos="zoom-in" data-aos-offset="0"/>
                     <p>Continue with Facebook</p>
                 </button>
             </div>
