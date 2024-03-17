@@ -14,11 +14,11 @@ const LoginForm = ({ phone }) => {
             <form action="">
                 <div className="fonminputs" data-aos="zoom-in" data-aos-offset="0">
                     <span>Phone Number</span>
-                    <input type="number" name="task" id="" placeholder='Enter Phone Number'/>
+                    <input type="number" name="task" id="" placeholder='Eg:- +2547****^534'/>
                 </div>
                 <div className="fonminputs" data-aos="zoom-in" data-aos-offset="0">
                     <span>OTP Verification</span>
-                    <input type="text" name="task" id="" placeholder='Enter OTP Code'/>
+                    <input type="text" name="task" id="" placeholder='Eg:- 234567'/>
                 </div>
                 <div className="fonminputs" data-aos="zoom-in" data-aos-offset="0">
                     <input type="submit" name='submit' value="Verify OTP"/>
@@ -27,11 +27,11 @@ const LoginForm = ({ phone }) => {
          :<form action="">
             <div className="fonminputs" data-aos="zoom-in" data-aos-offset="0">
                 <span>UserName</span>
-                <input type="text" name="task" id="" placeholder='Enter email'/>
+                <input type="text" name="task" id="" placeholder='Eg:- gtech27....@gmail.com'/>
             </div>
             <div className="fonminputs" data-aos="zoom-in" data-aos-offset="0">
                 <span>Password</span>
-                <input type="password" name="task" id="" placeholder='Enter password'/>
+                <input type="password" name="task" id="" placeholder='Must be atlist 8-characters Long'/>
             </div>
             <div className="fonminputs" data-aos="zoom-in" data-aos-offset="0">
                 <input type="submit" name='submit' value="Login"/>
