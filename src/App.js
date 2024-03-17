@@ -9,7 +9,7 @@ import { useState } from "react";
 
 function App() {
   const { windowClose } = useUserContext();
-  const [auth, setAuth] = useState(false);
+  const [auth, setAuth] = useState(true);
   console.log({setAuth})
 
   return (
