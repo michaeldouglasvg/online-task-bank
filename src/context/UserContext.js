@@ -7,22 +7,27 @@ const UserProvider = ({ children }) => {
   const [setting, setSettings] = useState(false);
   const [notifications, setNotifications] = useState(false);
 
-  const selectTodo = () => {
+  const windowClose = () => {
     if(setting) setSettings(false);
+    if(notifications) setNotifications(false);
+  }
+
+  const selectTodo = () => {
+    windowClose();
     setSelectOptions(!selectOption);
   }
 
   const openSettings = () => {
-    if(notifications) setNotifications(false);
+    windowClose();
     setSettings(!setting);
   }
 
   const setNotificationAlerts = () => {
-    if(setting) setSettings(false);
+    windowClose();
     setNotifications(!notifications);
   }
 
-  const values = { selectOption, 
+  const values = { selectOption, windowClose,
     selectTodo, openSettings, notifications,
     setSettings, setting, setSelectOptions, setNotificationAlerts
   }

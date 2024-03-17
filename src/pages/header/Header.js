@@ -1,9 +1,16 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { FaChartBar, FaChartLine, FaDownload, FaRegEdit, FaRegMoon, FaRegStar, FaRegTrashAlt, FaSignOutAlt, FaTasks, FaUserCog, FaUserPlus, FaUsers } from "react-icons/fa";
 import { useUserContext } from '../../context/UserContext';
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const Header = () => {
   const {setting, openSettings, selectTodo, selectOption, setNotificationAlerts, notifications } = useUserContext();
+
+  useEffect(() => {
+    AOS.init();
+    AOS.refresh();
+  }, []);
 
   return (
     <div className='Headermainstyles'>
@@ -30,7 +37,8 @@ const Header = () => {
           </div>
         </div>
       </div>
-      {notifications&&<div className="usercontrols">
+
+      {notifications&&<div className="usercontrols" data-aos="zoom-in" data-aos-offset="0">
         <h3>Analytics</h3>
         <div className="singleSetting">
           <FaTasks size={18} color='gray' className='Icon'/>
@@ -49,7 +57,8 @@ const Header = () => {
           <p>Accounts</p>
         </div>
       </div>}
-      {setting&&<div className="usercontrols">
+
+      {setting&&<div className="usercontrols" data-aos="zoom-in" data-aos-offset="0">
         <h3>User Settings</h3>
         <div className="singleSetting">
           <FaRegEdit size={18} color='gray' className='Icon'/>
