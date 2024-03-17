@@ -15,13 +15,14 @@ const Login = () => {
   return (
     <div className='MainLoginStyles'>
       <div className="heading">
-        <h1>Online Tasks Repo</h1><br />
+        <h1>My Task Cloud</h1><br />
         <h2>Login To Continue</h2>
       </div>
       <div className="loginoptions">
         <div className="navigator">
-            <button onClick={() => setPhone(false)}>Email</button>
-            <button onClick={() => setPhone(true)}>Phone</button>
+            <h3>Method:</h3>
+            <button onClick={() => setPhone(false)}>Use Email</button>
+            <button onClick={() => setPhone(true)}>Use Number</button>
         </div>
         <LoginForm phone={phone}/>
       </div>
